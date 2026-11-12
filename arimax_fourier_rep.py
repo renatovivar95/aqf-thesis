@@ -16,8 +16,8 @@ from sklearn.metrics import r2_score
 # ⚙️ CONFIGURATION
 # ==========================================================
 # Usage example:
-#   python arimax_model.py --pollutant PM10
-#   python arimax_model.py --pollutant NO2 --data aveiro_2018_2022_final_dataset.csv
+#   python arimax_fourier_rep.py --pollutant PM10
+#   python arimax_fourier_rep.py --pollutant NO2 --data aveiro_2018_2022_final_dataset.csv
 parser = argparse.ArgumentParser(description="ARIMAX (SARIMAX) forecasting for Aveiro air quality.")
 parser.add_argument("--pollutant", type=str, default="PM10",
                     help="Target pollutant column in the dataset (default: PM10)")
@@ -42,7 +42,7 @@ BURN_IN = 30          # initial training days excluded from metrics (diffuse ini
 N_CV_SPLITS = 5       # time-series CV ONLY within 2018-2021
 CV_TEST_SIZE = 182    # ~6 months per validation fold
 
-output_dir = f"arimax_model_results_{TARGET}_F2"
+output_dir = f"arimax_model_results_{TARGET}_F3"
 os.makedirs(output_dir, exist_ok=True)
 
 # ==========================================================

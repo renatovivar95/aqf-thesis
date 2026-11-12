@@ -48,10 +48,10 @@ pip install -r requirements.txt
 Run each script from the repository folder and choose the pollutant with `--pollutant`:
 
 ```bash
-python arimax_model.py --pollutant PM10
-python random_forest_model.py --pollutant NO2
-python xgboost_model.py --pollutant O3
-python hybrid_rf_sarimax.py --pollutant NO2
+python arimax_model_rep.py --pollutant PM10
+python random_forest_rep.py --pollutant NO2
+python xgboost_rep.py --pollutant O3
+python hybrid_rf_arimax_rep.py --pollutant NO2
 ```
 
 Supported pollutants: `NO2`, `O3`, `PM10`. The name must match the column name in the dataset exactly.

@@ -27,8 +27,8 @@ from statsmodels.tsa.stattools import adfuller
 # 2. CONFIG (command-line arguments)
 # =============================
 # Usage example:
-#   python hybrid_rf_sarimax.py --pollutant NO2
-#   python hybrid_rf_sarimax.py --pollutant PM10 --data aveiro_2018_2022_final_dataset.csv
+#   python hybrid_rf_arimax_rep.py --pollutant NO2
+#   python hybrid_rf_arimax_rep.py --pollutant PM10 --data aveiro_2018_2022_final_dataset.csv
 parser = argparse.ArgumentParser(description="Hybrid Random Forest + SARIMAX forecasting for Aveiro air quality.")
 parser.add_argument("--pollutant", type=str, default="NO2",
                     help="Target pollutant column in the dataset (default: NO2)")

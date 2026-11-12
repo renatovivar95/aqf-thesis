@@ -21,8 +21,8 @@ from sklearn.model_selection import TimeSeriesSplit, RandomizedSearchCV
 # 2. TARGET VARIABLE
 # =============================
 # Usage example:
-#   python random_forest_model.py --pollutant NO2
-#   python random_forest_model.py --pollutant PM10 --data aveiro_2018_2022_final_dataset.csv
+#   python random_forest_rep.py --pollutant NO2
+#   python random_forest_rep.py --pollutant PM10 --data aveiro_2018_2022_final_dataset.csv
 parser = argparse.ArgumentParser(description="Random Forest forecasting for Aveiro air quality.")
 parser.add_argument("--pollutant", type=str, default="NO2",
                     help="Target pollutant column in the dataset (default: NO2)")
@@ -36,7 +36,7 @@ args = parser.parse_args()
 target = args.pollutant  # e.g. 'NO2', 'PM10', 'O3'
 
 # Single results folder holds everything: plots, params, metrics, importances, CSVs
-output_dir = f"random_forest_model_results_{target}_F2"
+output_dir = f"random_forest_model_results_{target}_F3"
 os.makedirs(output_dir, exist_ok=True)
 
 

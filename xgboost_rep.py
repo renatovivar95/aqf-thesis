@@ -22,8 +22,8 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # 2. CONFIGURATION
 # =============================
 # Usage example:
-#   python xgboost_model.py --pollutant O3
-#   python xgboost_model.py --pollutant NO2 --data aveiro_2018_2022_final_dataset.csv
+#   python xgboost_rep.py --pollutant O3
+#   python xgboost_rep.py --pollutant NO2 --data aveiro_2018_2022_final_dataset.csv
 parser = argparse.ArgumentParser(description="XGBoost forecasting for Aveiro air quality.")
 parser.add_argument("--pollutant", type=str, default="O3",
                     help="Target pollutant column in the dataset: 'NO2', 'O3' or 'PM10' (default: O3)")
@@ -36,7 +36,7 @@ args = parser.parse_args()
 
 target = args.pollutant         # 'NO2', 'O3' or 'PM10'
 
-output_dir = f"xgboost_{target}_F2"
+output_dir = f"xgboost_{target}_F3"
 os.makedirs(output_dir, exist_ok=True)
 
 split_date = '2022-01-01'       # start of test period
